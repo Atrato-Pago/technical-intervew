@@ -6,17 +6,23 @@ module.exports = {
       {
         id: 1,
         name: "Netflix",
-        monthly_price: 219.99
+        monthly_price: 219.99,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 2,
         name: "Amazon Prime Video",
-        monthly_price: 199.99
+        monthly_price: 199.99,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 3,
         name: "Disney Plus",
-        monthly_price: 150
+        monthly_price: 150,
+        created_at: new Date(),
+        updated_at: new Date()
       }
     ]);
   },

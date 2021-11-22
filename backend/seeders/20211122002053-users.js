@@ -10,7 +10,9 @@ module.exports = {
         last_name: "Blaschek",
         email: "mblaschek0@apache.org",
         gender: "Agender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 2,
@@ -18,7 +20,9 @@ module.exports = {
         last_name: "Isaq",
         email: "bisaq1@imageshack.us",
         gender: "Polygender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 3,
@@ -26,7 +30,9 @@ module.exports = {
         last_name: "Farmloe",
         email: "ffarmloe2@usnews.com",
         gender: "Female",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 4,
@@ -34,7 +40,9 @@ module.exports = {
         last_name: "Anderer",
         email: "wanderer3@simplemachines.org",
         gender: "Genderfluid",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 5,
@@ -42,7 +50,9 @@ module.exports = {
         last_name: "Kennealy",
         email: "mkennealy4@friendfeed.com",
         gender: "Genderfluid",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 6,
@@ -50,7 +60,9 @@ module.exports = {
         last_name: "Hedan",
         email: "yhedan5@seattletimes.com",
         gender: "Female",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 7,
@@ -58,7 +70,9 @@ module.exports = {
         last_name: "Cooke",
         email: "ecooke6@boston.com",
         gender: "Polygender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 8,
@@ -66,7 +80,9 @@ module.exports = {
         last_name: "Turgoose",
         email: "dturgoose7@webmd.com",
         gender: "Non-binary",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 9,
@@ -74,7 +90,9 @@ module.exports = {
         last_name: "Louthe",
         email: "slouthe8@behance.net",
         gender: "Male",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 10,
@@ -82,7 +100,9 @@ module.exports = {
         last_name: "Grodden",
         email: "rgrodden9@elegantthemes.com",
         gender: "Genderfluid",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 11,
@@ -90,7 +110,9 @@ module.exports = {
         last_name: "Glader",
         email: "vgladera@ameblo.jp",
         gender: "Genderfluid",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 12,
@@ -98,7 +120,9 @@ module.exports = {
         last_name: "Serfati",
         email: "nserfatib@java.com",
         gender: "Bigender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 13,
@@ -106,7 +130,9 @@ module.exports = {
         last_name: "Boanas",
         email: "gboanasc@wp.com",
         gender: "Female",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 14,
@@ -114,7 +140,9 @@ module.exports = {
         last_name: "Yakunin",
         email: "kyakunind@baidu.com",
         gender: "Agender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 15,
@@ -122,7 +150,9 @@ module.exports = {
         last_name: "Eddow",
         email: "eeddowe@unesco.org",
         gender: "Male",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 16,
@@ -130,7 +160,9 @@ module.exports = {
         last_name: "Washington",
         email: "nwashingtonf@seattletimes.com",
         gender: "Bigender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 17,
@@ -138,7 +170,9 @@ module.exports = {
         last_name: "Antowski",
         email: "hantowskig@vk.com",
         gender: "Genderqueer",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 18,
@@ -146,7 +180,9 @@ module.exports = {
         last_name: "Latch",
         email: "jlatchh@seesaa.net",
         gender: "Non-binary",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 19,
@@ -154,7 +190,9 @@ module.exports = {
         last_name: "Unitt",
         email: "vunitti@google.ru",
         gender: "Female",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 20,
@@ -162,7 +200,9 @@ module.exports = {
         last_name: "Pearsall",
         email: "spearsallj@163.com",
         gender: "Bigender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 21,
@@ -170,7 +210,9 @@ module.exports = {
         last_name: "Airdrie",
         email: "lairdriek@hostgator.com",
         gender: "Agender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 22,
@@ -178,7 +220,9 @@ module.exports = {
         last_name: "Venard",
         email: "pvenardl@discovery.com",
         gender: "Bigender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 23,
@@ -186,7 +230,9 @@ module.exports = {
         last_name: "Trainor",
         email: "atrainorm@usnews.com",
         gender: "Genderfluid",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 24,
@@ -194,7 +240,9 @@ module.exports = {
         last_name: "Beddis",
         email: "sbeddisn@webnode.com",
         gender: "Genderfluid",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 25,
@@ -202,7 +250,9 @@ module.exports = {
         last_name: "Seven",
         email: "mseveno@goo.ne.jp",
         gender: "Female",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 26,
@@ -210,7 +260,9 @@ module.exports = {
         last_name: "Lathwell",
         email: "tlathwellp@microsoft.com",
         gender: "Female",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 27,
@@ -218,7 +270,9 @@ module.exports = {
         last_name: "Lipmann",
         email: "jlipmannq@live.com",
         gender: "Female",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 28,
@@ -226,7 +280,9 @@ module.exports = {
         last_name: "Spragge",
         email: "sspragger@google.com.au",
         gender: "Polygender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 29,
@@ -234,7 +290,9 @@ module.exports = {
         last_name: "Lammenga",
         email: "mlammengas@seattletimes.com",
         gender: "Agender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 30,
@@ -242,7 +300,9 @@ module.exports = {
         last_name: "Crankshaw",
         email: "ccrankshawt@vimeo.com",
         gender: "Bigender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 31,
@@ -250,7 +310,9 @@ module.exports = {
         last_name: "Harbach",
         email: "hharbachu@aboutads.info",
         gender: "Polygender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 32,
@@ -258,7 +320,9 @@ module.exports = {
         last_name: "Millions",
         email: "kmillionsv@multiply.com",
         gender: "Non-binary",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 33,
@@ -266,7 +330,9 @@ module.exports = {
         last_name: "Attoe",
         email: "dattoew@mapquest.com",
         gender: "Genderfluid",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 34,
@@ -274,7 +340,9 @@ module.exports = {
         last_name: "Ginnally",
         email: "eginnallyx@hp.com",
         gender: "Male",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 35,
@@ -282,7 +350,9 @@ module.exports = {
         last_name: "Askin",
         email: "gaskiny@discuz.net",
         gender: "Polygender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 36,
@@ -290,7 +360,9 @@ module.exports = {
         last_name: "Boldt",
         email: "sboldtz@fc2.com",
         gender: "Female",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 37,
@@ -298,7 +370,9 @@ module.exports = {
         last_name: "Leades",
         email: "vleades10@ucoz.ru",
         gender: "Genderfluid",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 38,
@@ -306,7 +380,9 @@ module.exports = {
         last_name: "Booth",
         email: "mbooth11@posterous.com",
         gender: "Genderfluid",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 39,
@@ -314,7 +390,9 @@ module.exports = {
         last_name: "Tumbridge",
         email: "btumbridge12@cam.ac.uk",
         gender: "Bigender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 40,
@@ -322,7 +400,9 @@ module.exports = {
         last_name: "Mapples",
         email: "smapples13@symantec.com",
         gender: "Non-binary",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 41,
@@ -330,7 +410,9 @@ module.exports = {
         last_name: "Zoppie",
         email: "bzoppie14@biblegateway.com",
         gender: "Male",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 42,
@@ -338,7 +420,9 @@ module.exports = {
         last_name: "Castille",
         email: "ycastille15@php.net",
         gender: "Bigender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 43,
@@ -346,7 +430,9 @@ module.exports = {
         last_name: "Keaveney",
         email: "bkeaveney16@homestead.com",
         gender: "Male",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 44,
@@ -354,7 +440,9 @@ module.exports = {
         last_name: "Hobgen",
         email: "lhobgen17@mtv.com",
         gender: "Genderqueer",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 45,
@@ -362,7 +450,9 @@ module.exports = {
         last_name: "Halbard",
         email: "ihalbard18@apache.org",
         gender: "Male",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 46,
@@ -370,7 +460,9 @@ module.exports = {
         last_name: "Reason",
         email: "breason19@51.la",
         gender: "Polygender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 47,
@@ -378,7 +470,9 @@ module.exports = {
         last_name: "Shoveller",
         email: "mshoveller1a@printfriendly.com",
         gender: "Female",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 48,
@@ -386,7 +480,9 @@ module.exports = {
         last_name: "Wimmer",
         email: "jwimmer1b@elpais.com",
         gender: "Bigender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 49,
@@ -394,7 +490,9 @@ module.exports = {
         last_name: "Hefferan",
         email: "rhefferan1c@paypal.com",
         gender: "Female",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 50,
@@ -402,7 +500,9 @@ module.exports = {
         last_name: "Winslett",
         email: "dwinslett1d@gizmodo.com",
         gender: "Polygender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 51,
@@ -410,7 +510,9 @@ module.exports = {
         last_name: "Edy",
         email: "eedy1e@domainmarket.com",
         gender: "Non-binary",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 52,
@@ -418,7 +520,9 @@ module.exports = {
         last_name: "Rudyard",
         email: "mrudyard1f@geocities.jp",
         gender: "Genderfluid",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 53,
@@ -426,7 +530,9 @@ module.exports = {
         last_name: "Burhouse",
         email: "aburhouse1g@marketwatch.com",
         gender: "Bigender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 54,
@@ -434,7 +540,9 @@ module.exports = {
         last_name: "Hacking",
         email: "phacking1h@geocities.jp",
         gender: "Polygender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 55,
@@ -442,7 +550,9 @@ module.exports = {
         last_name: "Illingworth",
         email: "hillingworth1i@nbcnews.com",
         gender: "Bigender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 56,
@@ -450,7 +560,9 @@ module.exports = {
         last_name: "Crimpe",
         email: "ecrimpe1j@nps.gov",
         gender: "Polygender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 57,
@@ -458,7 +570,9 @@ module.exports = {
         last_name: "Durrington",
         email: "ldurrington1k@furl.net",
         gender: "Male",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 58,
@@ -466,7 +580,9 @@ module.exports = {
         last_name: "Prangnell",
         email: "hprangnell1l@howstuffworks.com",
         gender: "Non-binary",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 59,
@@ -474,7 +590,9 @@ module.exports = {
         last_name: "Gavrielly",
         email: "egavrielly1m@utexas.edu",
         gender: "Bigender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 60,
@@ -482,7 +600,9 @@ module.exports = {
         last_name: "Allsobrook",
         email: "wallsobrook1n@free.fr",
         gender: "Genderfluid",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 61,
@@ -490,7 +610,9 @@ module.exports = {
         last_name: "Ellsbury",
         email: "sellsbury1o@globo.com",
         gender: "Genderqueer",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 62,
@@ -498,7 +620,9 @@ module.exports = {
         last_name: "Brigge",
         email: "cbrigge1p@eepurl.com",
         gender: "Genderqueer",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 63,
@@ -506,7 +630,9 @@ module.exports = {
         last_name: "Buy",
         email: "rbuy1q@arstechnica.com",
         gender: "Bigender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 64,
@@ -514,7 +640,9 @@ module.exports = {
         last_name: "Dowson",
         email: "rdowson1r@cdbaby.com",
         gender: "Bigender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 65,
@@ -522,7 +650,9 @@ module.exports = {
         last_name: "Sarjant",
         email: "lsarjant1s@aboutads.info",
         gender: "Genderqueer",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 66,
@@ -530,7 +660,9 @@ module.exports = {
         last_name: "Gynni",
         email: "dgynni1t@cafepress.com",
         gender: "Bigender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 67,
@@ -538,7 +670,9 @@ module.exports = {
         last_name: "Emberton",
         email: "temberton1u@tripod.com",
         gender: "Female",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 68,
@@ -546,7 +680,9 @@ module.exports = {
         last_name: "Comley",
         email: "mcomley1v@npr.org",
         gender: "Genderqueer",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 69,
@@ -554,7 +690,9 @@ module.exports = {
         last_name: "De Metz",
         email: "ademetz1w@aboutads.info",
         gender: "Female",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 70,
@@ -562,7 +700,9 @@ module.exports = {
         last_name: "Thickens",
         email: "pthickens1x@boston.com",
         gender: "Agender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 71,
@@ -570,7 +710,9 @@ module.exports = {
         last_name: "Laible",
         email: "glaible1y@homestead.com",
         gender: "Female",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 72,
@@ -578,7 +720,9 @@ module.exports = {
         last_name: "Loudian",
         email: "tloudian1z@google.com.au",
         gender: "Female",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 73,
@@ -586,7 +730,9 @@ module.exports = {
         last_name: "Flawn",
         email: "pflawn20@altervista.org",
         gender: "Male",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 74,
@@ -594,7 +740,9 @@ module.exports = {
         last_name: "Glazer",
         email: "gglazer21@histats.com",
         gender: "Agender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 75,
@@ -602,7 +750,9 @@ module.exports = {
         last_name: "O'Connolly",
         email: "koconnolly22@prnewswire.com",
         gender: "Bigender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 76,
@@ -610,7 +760,9 @@ module.exports = {
         last_name: "Pascho",
         email: "epascho23@printfriendly.com",
         gender: "Genderqueer",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 77,
@@ -618,7 +770,9 @@ module.exports = {
         last_name: "Vegas",
         email: "avegas24@scientificamerican.com",
         gender: "Agender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 78,
@@ -626,7 +780,9 @@ module.exports = {
         last_name: "Henrionot",
         email: "fhenrionot25@dyndns.org",
         gender: "Agender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 79,
@@ -634,7 +790,9 @@ module.exports = {
         last_name: "Castelyn",
         email: "dcastelyn26@sourceforge.net",
         gender: "Agender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 80,
@@ -642,7 +800,9 @@ module.exports = {
         last_name: "Brodeur",
         email: "ebrodeur27@typepad.com",
         gender: "Genderqueer",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 81,
@@ -650,7 +810,9 @@ module.exports = {
         last_name: "Rounsefull",
         email: "mrounsefull28@forbes.com",
         gender: "Non-binary",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 82,
@@ -658,7 +820,9 @@ module.exports = {
         last_name: "Penberthy",
         email: "dpenberthy29@samsung.com",
         gender: "Agender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 83,
@@ -666,7 +830,9 @@ module.exports = {
         last_name: "Halt",
         email: "phalt2a@oaic.gov.au",
         gender: "Bigender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 84,
@@ -674,7 +840,9 @@ module.exports = {
         last_name: "Pedron",
         email: "hpedron2b@amazon.com",
         gender: "Non-binary",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 85,
@@ -682,7 +850,9 @@ module.exports = {
         last_name: "Stuchburie",
         email: "mstuchburie2c@cloudflare.com",
         gender: "Female",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 86,
@@ -690,7 +860,9 @@ module.exports = {
         last_name: "Setford",
         email: "esetford2d@goo.ne.jp",
         gender: "Agender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 87,
@@ -698,7 +870,9 @@ module.exports = {
         last_name: "Rixon",
         email: "trixon2e@youtube.com",
         gender: "Polygender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 88,
@@ -706,7 +880,9 @@ module.exports = {
         last_name: "Wilsone",
         email: "vwilsone2f@army.mil",
         gender: "Bigender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 89,
@@ -714,7 +890,9 @@ module.exports = {
         last_name: "Boles",
         email: "aboles2g@mysql.com",
         gender: "Genderqueer",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 90,
@@ -722,7 +900,9 @@ module.exports = {
         last_name: "Batch",
         email: "sbatch2h@foxnews.com",
         gender: "Polygender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 91,
@@ -730,7 +910,9 @@ module.exports = {
         last_name: "Wigzell",
         email: "gwigzell2i@yolasite.com",
         gender: "Non-binary",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 92,
@@ -738,7 +920,9 @@ module.exports = {
         last_name: "Castanone",
         email: "mcastanone2j@ucoz.com",
         gender: "Genderfluid",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 93,
@@ -746,7 +930,9 @@ module.exports = {
         last_name: "Pawfoot",
         email: "bpawfoot2k@vistaprint.com",
         gender: "Female",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 94,
@@ -754,7 +940,9 @@ module.exports = {
         last_name: "Whittleton",
         email: "gwhittleton2l@tripod.com",
         gender: "Polygender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 95,
@@ -762,7 +950,9 @@ module.exports = {
         last_name: "Pinniger",
         email: "npinniger2m@economist.com",
         gender: "Bigender",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 96,
@@ -770,7 +960,9 @@ module.exports = {
         last_name: "Keets",
         email: "wkeets2n@altervista.org",
         gender: "Agender",
-        is_biweekly: true
+        is_biweekly: true,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 97,
@@ -778,7 +970,9 @@ module.exports = {
         last_name: "Pococke",
         email: "spococke2o@godaddy.com",
         gender: "Male",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 98,
@@ -786,7 +980,9 @@ module.exports = {
         last_name: "Callear",
         email: "hcallear2p@ameblo.jp",
         gender: "Genderfluid",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 99,
@@ -794,7 +990,9 @@ module.exports = {
         last_name: "Connichie",
         email: "mconnichie2q@auda.org.au",
         gender: "Female",
-        is_biweekly: false
+        is_biweekly: false,
+        created_at: new Date(),
+        updated_at: new Date()
       },
       {
         id: 100,

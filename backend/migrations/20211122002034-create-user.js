@@ -24,12 +24,10 @@ module.exports = {
         type: Sequelize.BOOLEAN
       },
       created_at: {
-        allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.NOW
       },
       updated_at: {
-        allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.NOW
       }

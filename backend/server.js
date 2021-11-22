@@ -1,16 +1,58 @@
-const express = require("express");
-const pool = require("./db");
-const app = express();
-const PORT = 5000;
+const express = require('express');
+const bodyParser = require('body-parser');
+const helmet = require('helmet');
+const methodOverride = require('method-override');
+const path = require('path');
+const compression = require('compression');
+const { createServer } = require('http');
+const { routes } = require('./routes');
 
-app.listen(5000, () => {
-    console.log(`Server started on port ${PORT}`);
-    // Se prueba un query antes para ver si funciona el pool
-    pool.query('SELECT 1 + 1 AS solution').then(() => {
-        console.log('Base de datos inicializada correctamente');
-    });
+const app = express();
+const server = createServer(app);
+
+// Security middleware
+app.use(helmet());
+
+// Util middleware
+app.use(methodOverride());
+
+// Body parser middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+  );
+  res.header('Access-Control-Expose-Headers', 'Content-Count');
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
+  return next();
 });
 
-app.get('/', function(req, res){
-    res.send('Hello from backend')
-})
+routes(app);
+
+const setupServer =  async function () {
+  return new Promise((resolve, reject) => {
+    try {
+      server.listen(process.env.PORT, () => {
+        console.log(`backend started at port ${process.env.PORT}`)
+        resolve(true);
+      });
+    } catch (err) {
+      reject(err);
+    }
+  });
+}
+
+module.exports = {
+  setupServer,
+  app,
+  server
+}
+

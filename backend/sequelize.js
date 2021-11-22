@@ -1,5 +1,6 @@
 const { Sequelize } = require('sequelize');
 const path = require('path');
+const { isNullOrUndefined } = require('util');
 const config = require('./config/database');
 
 const dbOptions = {
@@ -7,7 +8,6 @@ const dbOptions = {
   define: {
     freezeTableName: true,
     timestamps: true,
-    paranoid: true,
     underscored: true,
   },
   dialectOptions: {
