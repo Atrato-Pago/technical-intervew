@@ -6,11 +6,15 @@
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "mysql2": "^2.3.3",
     "nodemon": "^2.0.14",
+    "pg": "^8.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "sequelize": "^6.12.0-alpha.1",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -18,7 +22,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "backend": "node ./node_modules/nodemon/bin/nodemon.js backend/server.js"
+    "backend": "node ./node_modules/nodemon/bin/nodemon.js backend/server.js",
+    "db:migrate": "sequelize db:migrate",
+    "db:migrate:undo": "sequelize db:migrate:undo",
+    "db:reset": "sequelize db:drop && sequelize db:create && sequelize db:migrate",
+    "db:seed": "sequelize db:seed:all",
+    "db:create": "sequelize db:create"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +48,6 @@
     ]
   },
   "devDependencies": {
-    "mysql2": "^2.3.2"
+    "sequelize-cli": "^6.3.0"
   }
 }
