@@ -1,7 +1,10 @@
 const { Router } = require('express');
+const UserController = require('./controllers/users_controller');
 
 const apiV1 = () => {
   const router = Router();
+
+  router.use(`/${UserController.name}`, UserController.routes());
   return router;
 };
 

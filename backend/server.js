@@ -40,8 +40,8 @@ routes(app);
 const setupServer =  async function () {
   return new Promise((resolve, reject) => {
     try {
-      server.listen(process.env.PORT, () => {
-        console.log(`backend started at port ${process.env.PORT}`)
+      server.listen(5555, () => {
+        console.log(`backend started at port ${5555}`)
         resolve(true);
       });
     } catch (err) {
