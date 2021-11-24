@@ -1,7 +1,21 @@
 const moment = require("moment");
+const { Op } = require('sequelize')
 const { Controller } = require("./base_controller");
-const { User, Subscription, Payment, Platform } = require("./../models");
+const { User, Subscription, Payment, Platform, Holiday } = require("./../models");
 
+const _validateDate = (holidays, next_date) => {
+  let date = next_date.clone();
+
+  while(date.isoWeekday() == 6 || date.isoWeekday() == 7) {
+    date = date.add(1, 'day');
+  }
+
+  while(holidays.find((holiday) => holiday.isSame(date))) {
+    date = date.add(1, 'day');
+  }
+
+  return date;
+}
 class UserController extends Controller {
   constructor() {
     super();
@@ -11,12 +25,14 @@ class UserController extends Controller {
   routes() {
     this.router.get(
       '/',
+      this.loadHolidays(),
       (req, res, next) =>
         this.find(req, res, next),
     );
 
     this.router.get(
       '/:id',
+      this.loadHolidays(),
       this.loadUser(),
       (req, res, next) =>
         this.findOne(req, res, next),
@@ -24,6 +40,7 @@ class UserController extends Controller {
 
     this.router.get(
       '/:id/payments',
+      this.loadHolidays(),
       this.loadUser(),
       (req, res, next) =>
         this.payments(req, res, next),
@@ -31,6 +48,7 @@ class UserController extends Controller {
 
     this.router.get(
       '/:id/next_payment',
+      this.loadHolidays(),
       this.loadUser(),
       (req, res, next) =>
         this.nextPayment(req, res, next),
@@ -49,7 +67,7 @@ class UserController extends Controller {
           { model: Payment, attributes: ['date', 'amount'], order: [['date', 'ASC']] },
         ],
       });
-      const users_with_data = users.map(this._mapUsers);
+      const users_with_data = users.map((u) => this._mapUsers(req.session.holidays, u));
       return Controller.ok(res, null, users_with_data);
     } catch (error) {
       return next(error);
@@ -83,7 +101,7 @@ class UserController extends Controller {
       }
       const last_payment = moment(user.Payments[0].date);
       const next_payment = user.is_biweekly ? last_payment.add(15, 'days') : last_payment.add(1, 'month') ;
-      return Controller.ok(res, null, next_payment);
+      return Controller.ok(res, null, _validateDate(req.session.holidays, next_payment));
     } catch (error) {
       return next(error);
     }
@@ -111,12 +129,23 @@ class UserController extends Controller {
     };
   }
 
-  _mapUsers(u) {
+  loadHolidays() {
+    return async (req, res, next) => {
+      try {
+        req.session.holidays = await Holiday.toMoment();
+        return next();
+      } catch (error) {
+        return next(error);
+      }
+    };
+  }
+
+  _mapUsers(holidays, u) {
     const user = u.get({plain: true})
     if (user?.Payments?.[0]?.date) {
       const last_payment = moment(user.Payments[0].date);
       const next_payment = user.is_biweekly ? last_payment.add(15, 'days') : last_payment.add(1, 'month') ;
-      user['next_payment'] = next_payment;
+      user['next_payment'] = _validateDate(holidays, next_payment);
       user['next_payment_amount'] = user.Subscriptions.reduce((i, s) => Number(s.Platform.monthly_price) + i, 0);
     }
 

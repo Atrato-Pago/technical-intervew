@@ -2,12 +2,12 @@ const moment = require("moment");
 const yup = require("yup");
 const { Controller } = require("./base_controller");
 const { User, Subscription, Payment, Platform, Holiday } = require("./../models");
-const user = require("../models/user");
+const { Parser } = require('json2csv');
 
 class ReportController extends Controller {
   constructor() {
     super();
-    this.name = 'report';
+    this.name = 'reports';
   }
 
   routes() {
@@ -23,33 +23,72 @@ class ReportController extends Controller {
 
   async future_cash_flow(req, res, next){
     try {
+
+      let schema = yup.object().shape({
+        from: yup.date().required(),
+        to: yup.date().required()
+      });
+
+      try {
+        await schema.validate(req.query);
+      } catch(e) {
+        return Controller.badRequest(res, null);
+      }
+
+      const from = moment(req.query.from);
+      const to = moment(req.query.to);
+
+      if (!from.isValid() || !to.isValid()) {
+        return Controller.badRequest(res, null);
+      }
+
       const users = await this._loadUsers();
-      return Controller.ok(res, null, users_with_data);
+      const holidays = await Holiday.toMoment();
+
+      const payments = this._calculate(users, from, to, holidays);
+
+      if (req.query.csv) {
+        const data = (new Parser({fields: ['user_id', 'date', 'amount']})).parse(payments);
+        return Controller.file(res, data, 'text/csv');
+      } else {
+        return Controller.ok(res, null, payments);
+      }
+
+
     } catch (error) {
       return next(error);
     }
   }
 
-  async _calculate(users, date) {
-    const total = 0;
-    users.forEach(user => {
-      const total_user = 0;
+  _calculate(users, from, to, holidays) {
+    const payments = users.flatMap(user => {
+      if(user.Subscriptions.length === 0 ) {
+        return [];
+      }
+      const next_payments = [];
       const total_subscription = user.Subscriptions.reduce((i, s) => Number(s.Platform.monthly_price) + i, 0);
-      // We are assuming that we only care for users with a payment
-      if (!user?.Payments?.[0]) {
-        continue;
-      }
-      let next_payment = user.is_biweekly ? next_payment.add(15, 'days') : next_payment.add(1, 'month') ;
 
-      while(next_payment.isBefore(date)) {
+      const last_payment = moment(user?.Payments?.[0]?.date);
+      let next_payment;
+      if(!last_payment.isBetween(from, to)) {
+        next_payment = from.clone().add(1, 'month').startOf('month');
+      } else {
+        next_payment = user.is_biweekly ? last_payment.add(15, 'days') : last_payment.add(1, 'month') ;
+      }
+
+      while(next_payment.isBefore(to)) {
+        next_payments.push({
+          date: this._validateDate(next_payment, holidays),
+          user_id: user.id,
+          amount: total_subscription
+        })
         next_payment = user.is_biweekly ? next_payment.add(15, 'days') : next_payment.add(1, 'month');
-        total_user = total_user + total_subscription;
       }
 
-      total = total + total_user;
+      return next_payments;
     });
 
-    return total;
+    return payments;
   }
 
   async _loadUsers() {
@@ -63,6 +102,20 @@ class ReportController extends Controller {
     });
 
     return users
+  }
+
+  _validateDate(next_date, holidays) {
+    let date = next_date.clone();
+
+    while(date.isoWeekday() == 6 || date.isoWeekday() == 7) {
+      date = date.add(1, 'day');
+    }
+
+    while(holidays.find((holiday) => holiday.isSame(date))) {
+      date = date.add(1, 'day');
+    }
+
+    return date;
   }
 
 };

@@ -1,10 +1,12 @@
 const { Router } = require('express');
 const UserController = require('./controllers/users_controller');
+const ReportController = require('./controllers/reports_controller');
 
 const apiV1 = () => {
   const router = Router();
 
   router.use(`/${UserController.name}`, UserController.routes());
+  router.use(`/${ReportController.name}`, ReportController.routes());
   return router;
 };
 

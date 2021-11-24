@@ -7,8 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
     }
 
-    static toMoment() {
-      return Holiday.findAll({where: { is_active: true }}).map((day) => {
+    static async toMoment() {
+      return (await Holiday.findAll({where: { is_active: true }})).map((day) => {
         return moment(day.date);
       })
     }
