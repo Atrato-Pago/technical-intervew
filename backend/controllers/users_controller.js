@@ -1,6 +1,6 @@
 const moment = require("moment");
 const { Controller } = require("./base_controller");
-const { User, Profile, Subscription, Payment, Platform, Holiday } = require("./../models");
+const { User, Subscription, Payment, Platform } = require("./../models");
 
 class UserController extends Controller {
   constructor() {
