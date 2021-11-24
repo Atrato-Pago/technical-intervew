@@ -1,3 +1,4 @@
+const moment = require("moment");
 const { Controller } = require("./base_controller");
 const { User, Profile, Subscription, Payment, Platform, Holiday } = require("./../models");
 
@@ -43,12 +44,13 @@ class UserController extends Controller {
       const users = await User.findAll({
         include: [
           { model: Subscription, attributes: ['PlatformId'] , include: [
-            {model: Platform, attributes: ['name']}
+            {model: Platform, attributes: ['name', 'monthly_price']}
           ] },
           { model: Payment, attributes: ['date', 'amount'], order: [['date', 'ASC']] },
         ],
       });
-      return Controller.ok(res, null, users);
+      const users_with_data = users.map(this._mapUsers);
+      return Controller.ok(res, null, users_with_data);
     } catch (error) {
       return next(error);
     }
@@ -79,9 +81,9 @@ class UserController extends Controller {
       if (!user?.Payments?.[0]?.date) {
         return Controller.badRequest(res, null);
       }
-      const last_payment = user.Payments[0].date;
-      const holidays = await Holiday.findAll({where: { is_active: true }});
-      return Controller.ok(res, null, last_payment);
+      const last_payment = moment(user.Payments[0].date);
+      const next_payment = user.is_biweekly ? last_payment.add(15, 'days') : last_payment.add(1, 'month') ;
+      return Controller.ok(res, null, next_payment);
     } catch (error) {
       return next(error);
     }
@@ -93,7 +95,7 @@ class UserController extends Controller {
         const user = await User.findByPk(req.params.id, {
           include: [
             { model: Subscription, attributes: ['PlatformId'] , include: [
-              {model: Platform, attributes: ['name']}
+              {model: Platform, attributes: ['name', 'monthly_price']}
             ] },
             { model: Payment, limit: 1, order: [['date', 'DESC']] },
           ],
@@ -107,6 +109,18 @@ class UserController extends Controller {
         return next(error);
       }
     };
+  }
+
+  _mapUsers(u) {
+    const user = u.get({plain: true})
+    if (user?.Payments?.[0]?.date) {
+      const last_payment = moment(user.Payments[0].date);
+      const next_payment = user.is_biweekly ? last_payment.add(15, 'days') : last_payment.add(1, 'month') ;
+      user['next_payment'] = next_payment;
+      user['next_payment_amount'] = user.Subscriptions.reduce((i, s) => Number(s.Platform.monthly_price) + i, 0);
+    }
+
+    return user;
   }
 
 
